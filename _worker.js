@@ -100,8 +100,8 @@ export default {
                     }
                     default:
                         // return new Response('Not found', { status: 404 });
-                        // For any other path, reverse proxy to 'maimai.sega.com' and return the original response
-                        url.hostname = 'maimai.sega.com';
+                        // For any other path, reverse proxy to 'www.alibaba.com' and return the original response
+                        url.hostname = 'www.alibaba.com';
                         url.protocol = 'https:';
                         request = new Request(url, request);
                         return await fetch(request);
