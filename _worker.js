@@ -6,7 +6,7 @@ import { connect } from 'cloudflare:sockets';
 // [Windows] Press "Win + R", input cmd and run:  Powershell -NoExit -Command "[guid]::NewGuid()"
 let userID = '1d0d595f-4ba4-4d27-8703-9473c3cdf5a3';
 
-const proxyIPs = ['fbi.gov', 'www.visa.co.jp', 'www.visa.com.tw', 'www.visa.com.hk', 'www.visa.com.sg'];
+const proxyIPs = ['fbi.gov'];
 let proxyIP = proxyIPs[Math.floor(Math.random() * proxyIPs.length)];
 
 let dohURL = 'https://sky.rethinkdns.com/1:-Pf_____9_8A_AMAIgE8kMABVDDmKOHTAKg='; // https://cloudflare-dns.com/dns-query or https://dns.google/dns-query
@@ -100,8 +100,8 @@ export default {
                     }
                     default:
                         // return new Response('Not found', { status: 404 });
-                        // For any other path, reverse proxy to 'www.alibaba.com' and return the original response
-                        url.hostname = 'www.alibaba.com';
+                        // For any other path, reverse proxy to 'www.odoo.com' and return the original response
+                        url.hostname = 'www.odoo.com';
                         url.protocol = 'https:';
                         request = new Request(url, request);
                         return await fetch(request);
