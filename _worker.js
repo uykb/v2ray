@@ -100,8 +100,8 @@ export default {
                     }
                     default:
                         // return new Response('Not found', { status: 404 });
-                        // For any other path, reverse proxy to 'www.odoo.com' and return the original response
-                        url.hostname = 'www.odoo.com';
+                        // For any other path, reverse proxy to 'www.sogo.com' and return the original response
+                        url.hostname = 'www.sogo.com';
                         url.protocol = 'https:';
                         request = new Request(url, request);
                         return await fetch(request);
